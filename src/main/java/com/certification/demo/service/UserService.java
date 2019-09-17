@@ -1,4 +1,4 @@
-package com.certification.demo.services;
+package com.certification.demo.service;
 
 import com.certification.demo.mapper.UserMapper;
 import com.certification.demo.model.entity.User;

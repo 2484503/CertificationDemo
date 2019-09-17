@@ -1,8 +1,8 @@
-package com.certification.demo.service;
+package com.certification.demo.controller;
 
 import com.certification.demo.model.entity.User;
 import com.certification.demo.sdk.LoginClient;
-import com.certification.demo.services.UserService;
+import com.certification.demo.service.UserService;
 import com.certification.demo.utils.MD5Util;
 import com.certification.demo.utils.TokenProccessorUtil;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2019/9/17 10:25
  */
 @RestController
-public class LoginService implements LoginClient {
+public class LoginController implements LoginClient {
 
     private final UserService userService;
 
-    public LoginService(UserService userService) {
+    public LoginController(UserService userService) {
         this.userService = userService;
     }
 
