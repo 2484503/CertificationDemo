@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: certification-service
+
+server:
+  port: 5001
+
