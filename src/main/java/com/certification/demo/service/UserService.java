@@ -18,10 +18,7 @@ public class UserService {
     UserMapper userMapper;
 
     public User getUserByNamePassword(String username, String password) {
-
         User user = userMapper.getUserByNamePassword(username, password);
-
         return user;
     }
-
 }
