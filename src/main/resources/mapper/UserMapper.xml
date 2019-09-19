@@ -13,6 +13,10 @@
     id, username, password, is_valid, create_time, update_time
     </sql>
     <select id="getUserByNamePassword" resultType="com.certification.demo.model.entity.User">
-        SELECT * FROM user WHERE username = #{username} AND password = #{password} AND is_valid = 1
+        SELECT * FROM user
+        <trim prefix="WHERE" prefixOverrides="AND | OR">
+            <if test="username != null and username.length()>0">AND username= #{username}</if>
+            <if test="password != null and password.length()>0">AND password= #{password}</if>
+        </trim>
     </select>
 </mapper>
